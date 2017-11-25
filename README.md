@@ -168,7 +168,7 @@ Run `npm run lint` to check for potential errors in the source code.
 ## Citation
 
 Please cite as:
-- L. A. Leiva. **Responsive Text Summarization**. *Inf. Process. Lett.* 130C, 2018.
+- Leiva, L. A. (2018) **Responsive Text Summarization**. *Inf. Process. Lett.* 130.
 
 BibTeX entry:
 ```bibtex
