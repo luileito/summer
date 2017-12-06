@@ -208,3 +208,11 @@ BibTeX entry:
 
 This libray is released with the [MIT license](LICENSE).
 The only requirement is that you keep my copyright notice intact when you repurpose, redistribute, or reuse this code.
+
+## Acknowledgments
+
+- Frankie Roberto (seed idea)
+- James Brooks (NaiveRank)
+- Havel Cyrus (TextRank)
+- Stephen MacNeil (PageRank)
+- Pavel Savshenko et al. (CSSPath)
