@@ -1,10 +1,14 @@
 # Summer
 
-Summer is a JavaScript software to enable Responsive Text Summarization,
+Summer is a JavaScript software to enable **Responsive Text Summarization**,
 an approach to web design aimed at allowing desktop web pages to be read
 in response to the size of the device a user is browsing with.
 
 ![Sample output](teaser.png?raw=true)
+
+Summer automatically removes non-relevant sentences from a source text according to your CSS media queries.
+For instance, your desktop users could read the full text and your mobile users just half of the content
+(those users would read the relevant half of the content, BTW).
 
 The "Summer" name itself is a summarization of the word "Summ(ariz)er" :wink:
 
@@ -15,7 +19,11 @@ and add the `--text-summary` CSS property to the element(s) you wish to summariz
 For instance, by setting `#someId { --text-summary: 0.8; }` in your stylesheet,
 the text inside the `#someId` element will be summarized to 80% of its original length.
 
+**Note:** HTML tags are preserved but DOM events are not (you should use [event delegation](https://www.sitepoint.com/javascript-event-delegation-is-easier-than-you-think/) for that).
+
 ## Available CSS properties
+
+You can configure the following properties in your CSS stylesheets.
 
 * `--text-summary: float|percentage|string` indicates the length of the sumarized text.
 Default: `none`.
@@ -137,6 +145,20 @@ upon reaching each of specified CSS break points below.
 </html>
 ```
 
+## JavaScript API
+
+It is possible to use Summer in vanilla JavaScript, though you'll miss the beauty of responsive web design via CSS breakpoints et al.
+Anyways, here's how you can do it:
+```js
+// Indicate that Summer will run in standalone mode, which will disable CSS parsing.
+Summer.standalone = true;
+// From here onward you just have to call the `summarize` method.
+Summer.summarize('article .content', '2 sentences');
+```
+
+All configurable CSS properties are available in the JavaScript API.
+Read the [JavaScript documentation](#documentation) to know more.
+
 ## Demo & Tests
 
 Run `npm test` to launch a demo server.
@@ -147,7 +169,7 @@ The test results are shown in the developer console (hit <kbd>F12</kbd> to open 
 
 ## Documentation
 
-Run `npm run docs` to generate the JavaScript module documentation.
+Run `npm run docs` to generate the JavaScript documentation.
 
 Alternatively, run `npm run docco` to generate a readable version of the source code.
 
