@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "docs": "jsdoc -c jsdoc.json -d docs lib/summer.js || echo [sudo] npm i -g jsdoc",
-    "docco": "docco lib/summer.js || echo [sudo] npm i -g doco",
+    "docco": "docco lib/summer.js || echo [sudo] npm i -g docco",
     "lint": "eslint lib/summer.js || echo [sudo] npm i -g eslint",
     "dist": "grunt || echo Install dev dependencies: npm i",
     "demo": "http-server ./demo/ -o -a localhost || echo [sudo] npm i -g http-server",
