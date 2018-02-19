@@ -199,6 +199,7 @@ BibTeX entry:
   title   = "Responsive Text Summarization",
   journal = "Inf. Process. Lett.",
   volume  = "130",
+  number  = "C",
   year    = "2018",
   doi     = "https://doi.org/10.1016/j.ipl.2017.10.007",
 }
